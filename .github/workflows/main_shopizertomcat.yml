@@ -51,3 +51,7 @@ jobs:
           slot-name: 'Production'
           package: '*.war'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_31979C508A444CA48DC9BE6EADE39EE3 }}
+        env:
+            JAVA_OPTS: '-javaagent:/home/site/wwwroot/otel/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/home/site/wwwroot/otel/de.retit.apm.javaagent.extension.jar'
+            OTEL_EXPORTER_OTLP_ENDPOINT: 'http://138.91.104.195:4317'
+            OTEL_TRACES_EXPORTER: 'logging,otlp'
