@@ -47,7 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'ShopizerTomcat'
+          app-name: 'Shopizer-JavaSE-Prod'
           slot-name: 'Production'
           package: '*.war'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_31979C508A444CA48DC9BE6EADE39EE3 }}
