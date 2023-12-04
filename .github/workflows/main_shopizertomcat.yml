@@ -42,15 +42,16 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: sm-shop-app
-      
+        env:
+            JAVA_OPTS: '-javaagent:/home/site/wwwroot/otel/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/home/site/wwwroot/otel/de.retit.apm.javaagent.extension.jar'
+            OTEL_EXPORTER_OTLP_ENDPOINT: 'http://138.91.104.195:4317'
+            OTEL_TRACES_EXPORTER: 'logging,otlp'
+            AZURE_WEBAPP_PACKAGE_PATH: '.'
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'Shopizer-JavaSE'
-          package: '*.jar'
+          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/target/shopizer.jar'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        env:
-            JAVA_OPTS: '-javaagent:/home/site/wwwroot/otel/opentelemetry-javaagent.jar -Dotel.javaagent.extensions=/home/site/wwwroot/otel/de.retit.apm.javaagent.extension.jar'
-            OTEL_EXPORTER_OTLP_ENDPOINT: 'http://138.91.104.195:4317'
-            OTEL_TRACES_EXPORTER: 'logging,otlp'
+        
