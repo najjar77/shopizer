@@ -27,8 +27,8 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.war'
+          name: sm-shop-app
+          path: 'sm-shop/target/shopizer.jar'
 
   deploy:
     runs-on: ubuntu-latest
