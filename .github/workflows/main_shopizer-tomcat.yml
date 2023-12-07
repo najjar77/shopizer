@@ -48,6 +48,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'Shopizer-tomcat'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_79EFED24725E4583A0261F02953774B8 }}
           package: '*.war'
