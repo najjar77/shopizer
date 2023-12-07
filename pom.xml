@@ -440,19 +440,19 @@
 		</dependency>
 
 		<!-- Elastic search TODO replace with starter-->
-
+<!--
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!-- oracle -->
 		<!-- <dependency> <groupId>com.oracle</groupId> <artifactId>ojdbc8</artifactId> 
 			<version>${oracle.version}</version> </dependency> -->
 
 
-		<!-- postgres <dependency> <groupId>org.postgresql</groupId> <artifactId>postgresql</artifactId> 
-			</dependency> -->
+		<dependency> <groupId>org.postgresql</groupId> <artifactId>postgresql</artifactId> 
+			</dependency>
 
 		<dependency>
 			<groupId>org.junit.vintage</groupId>
