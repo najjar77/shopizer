@@ -172,12 +172,13 @@
 				<artifactId>json-simple</artifactId>
 				<version>${simple-json-version}</version>
 			</dependency>
-
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>${mysql-jdbc-version}</version>
-			</dependency>
+<!--
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>${mysql-jdbc-version}</version>
+</dependency>
+-->
 
 			<!-- For connecting to oracle -->
 			<!-- <dependency> <groupId>com.oracle.database.jdbc</groupId> <artifactId>ojdbc8</artifactId> 
@@ -185,8 +186,8 @@
 
 
 			<!-- For connecting to postgresql -->
-			<!-- <dependency> <groupId>org.postgresql</groupId> <artifactId>postgresql</artifactId> 
-				<version>${postgresql.version}</version> <scope>runtime</scope> </dependency> -->
+			<dependency> <groupId>org.postgresql</groupId> <artifactId>postgresql</artifactId> 
+				<version>${postgresql.version}</version> <scope>runtime</scope> </dependency> 
 
 			<!-- Google Map API -->
 			<dependency>
