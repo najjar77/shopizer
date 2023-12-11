@@ -54,6 +54,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'Shopizer-SE-11'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9675DC2567844C87B17A40AB064F04FC }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_SE_11}}
           package: '*.jar'
