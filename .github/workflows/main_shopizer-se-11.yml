@@ -50,4 +50,4 @@ jobs:
           app-name: 'Shopizer-SE-11'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6495300F026C43ABBEC4AFDD3E3EFE6B }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_11_VERSUCH_2 }}
