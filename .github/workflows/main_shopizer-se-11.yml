@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: shopizer
-          path: 'target/*.jar'
+          path: 'sm-shop/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
